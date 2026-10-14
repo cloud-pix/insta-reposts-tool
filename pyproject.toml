@@ -1,0 +1,18 @@
+[project]
+name = "insta-reposts-tool"
+version = "0.1.0"
+description = "FOSS CLI to fish all repost links of an Instagram profile and download them (yt-dlp style, login optional)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+dependencies = ["curl_cffi>=0.5", "requests>=2.28"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+insta-reposts = "insta_reposts.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
